@@ -1,0 +1,14 @@
+How to use this template:
+
+1. add a new slide:
+	Copy an existing slide into new.html
+	In this new file, leave the header and fooret alone
+	Feel free to change all else that you want
+	Open Assets/slides.js
+		Add the list containing "[ the name, the title]" in the appropriate position in slides
+		
+2. Move an existing slide around:
+	Open Assets/slides.js
+		Move the list containing [name, title] of the slide to the appropriate position in slides
+
+3. Change the look and feel in tutorial.css

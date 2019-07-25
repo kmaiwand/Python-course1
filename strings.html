@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Strings</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Strings</h1>
+	<p>Python does not have a type for characters, instead it supports strings of characters surrounded by single quotes (') or double quotes (").</p>
+	<ul>
+		<li>Examples: 'Vienna', 'Hello world!', "The quick brown FOX"</li>
+		<li>Operators: + (concatenate), * (repeat), slices (substrings)</li>
+		<li>Comparison: ==, !=, >, <, >=, <= </li>
+	</ul>
+	<h2>String examples</h2>
+	<div class='code'><pre>
+sentence = "The quick brown FOX"¬
+sentence = sentence + ' jumps'¬
+print( '~' * 20)¬<br/>
+print( sentence[4])¬
+>>>q
+print( sentence[2:8])¬
+>>>e quic</p>
+	</pre></div>
+	
+	<p class='push'>Python has a multitude of string methods.</p>
+	<div class='code'><pre>
+print( sentence.upper(), '|', sentence.lower())¬
+>>>THE QUICK BROWN FOX | the quick brown fox
+print( 'length:', len( sentence))¬
+>>>length: 25
+	</pre></div>
+	<p class='push'>Note that strings are immutable, i.e., you cannot change a string in place.</p>
+	<p class='push'>String methods include: find, count, replace, capitalize, swapcase, strip, and many more...</p>
+	<p class='push'><span class='home'>Explore</span>: strings on <a href='https://docs.python.org/3.7/tutorial/introduction.html#strings' target='_blank'>docs.python.org</a>.</p>
+
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

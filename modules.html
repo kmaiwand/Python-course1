@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Modules</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Python Modules</h1>
+	<p>A module is a file containing Python definitions and statements. The file name is the module name with the suffix '.py' appended.</p>
+	
+	<h2>User Modules</h2>
+	<p>If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables) are lost. Therefore, if you want to write a somewhat longer program, you are better off using the IDLE editor or a text editor to prepare the input for the interpreter and running it with that file as input instead. </p>
+	<p class='push'><span class='home'>Explore</span>: modules <a href='https://docs.python.org/3/tutorial/modules.html' target='_blank'>docs.python.org</a>.</p>
+	
+	<p class='push'><strong>Exercise</strong></p>
+	<p>Create a module containing a function that takes a radius as input and returns the area of the circle.<img src='Assets/icon_down.png' alt='Down' onclick="show_hide('div1')"/></p>
+	<div id='div1' class='code' style='display: none'><pre>
+def area( radius):
+	return 3.14 * radius**2
+	
+print( area(2.0))
+	</pre></div><br/>
+
+	<h2>System Modules</h2>
+	<p>Python comes with an extensive library of <a href='https://docs.python.org/3/library' target='_blank'>standard modules<a/>. These extend the core language and can be platform dependent.</p>
+	<p class='push'>Below is an example for using a standard library<img src='Assets/icon_down.png' alt='Down' onclick="show_hide('div2')"/></p>
+	<div id='div2' class='code' style='display: none'><pre>
+import random
+def gamble():
+	""" roll 2 dice """
+	min, max = 1, 6
+	roll_again = "y"
+	while roll_again == "y":
+		print( "Rolling the dice...", random.randint(min, max), ',', random.randint(min, max))
+		roll_again = input("Roll the dice again (y/n)?")
+
+gamble()
+	</pre></div>
+	
+	<h2>External Modules</h2>
+	<p>There is a plethora of third-party modules for all kinds of needs and purposes. These typically need to be downloaded/installed before you can use them.</p>
+
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

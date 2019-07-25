@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Numbers</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Numbers</h1>
+	<p>Numbers include integers (int) and real or floating point (float).</p>
+	<ul>
+		<li>Examples: 24, 3.5, -1027, 3.14159 </li>
+		<li>Operators: +,  -,  *,  /,  // (floor div),  % (modulo),  ** </li>
+			<li>Comparison: ==, !=, >, <, >=, <= </li>
+	</ul>
+
+	<p><span class='home'>Explore</span>: numbers on <a href='https://www.learnpython.org/en/Variables_and_Types' target='_blank'>LearnPython.org</a></p>
+	<p class='push'>Number methods include: abs, trunc, round, floor, ceil, and many more...</p>
+	<p class='push'>Operators follow the usual precedence rules.<img src='Assets/icon_down.png' alt='Down' onclick="show_hide('p1')"/></p>
+	<div class='code'>
+		number = 1 + 2 * 3 / 4.0¬<br/>
+		print( number)¬<br/>
+	</div>
+	<p id='p1' class='code' style='display: none'>>>>2.5</p>
+	<h2>Number Exercises</h2>
+	<p onclick="show_hide('div1')">Convert degrees Fahrenheit to Celsius <img src='Assets/icon_down.png' alt='Down' /></p>
+	<p>C = (F - 32) * 5/9</p>
+	<div id='div1' class='code' style='display: none'><pre>
+fahrenheit = int( input( 'Degrees in fahrenheit: '))
+print( 'Celsius =', (fahrenheit - 32) * 5/¬<br/>
+Note: we will see later how to check if a valid number was entered.
+	</pre></div>
+	
+	<p onclick="show_hide('div2')">Decide whether a given year is a leap year <img src='Assets/icon_down.png' alt='Down' /></p>
+	<p>Year is divisible by 400 or Year is divisible by 4 but not divisible by 100</p>
+	<div id='div2' class='code' style='display: none'><pre>
+year = int( input( 'Enter the year: '))
+print('Leap year: ', year % 400 == 0 or ( year % 4 == 0 and year % 100 != 0))
+	</pre></div>
+		
+	<p class='push'><span class='home'>Explore</span>: variables on <a href='https://www.learnpython.org/en/Variables_and_Types' target='_blank'>LearnPython</a>.</p>
+	
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

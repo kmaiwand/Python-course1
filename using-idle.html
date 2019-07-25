@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Install</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Using IDLE</h1>
+	<p>The Python language comes with an IDE (called <a href='#' title='After Eric Idle of Monty Python?'>IDLE</a> = Integrated Development and Learning Environment), consisting of:</p>
+	<ul>
+		<li>Language specific editor</li>
+		<li>Shell/interpreter with syntax highlighting</li>
+		<li>Integrated debugger</li>
+	</ul>
+	<p>When you start IDLE, you should see something like:</p>
+	<div class='code'>
+		<p>Python 3.7.3 (v3.7.3:9a3ffc0492, Dec 24 2018, 02:44:43)</p>
+		<p>Type "help", "copyright", "credits" or "license()" for more information.</p>
+		<p >>>></p>
+	</div>
+	<p class='push'>Type in:</p>
+	<p class='code'>>>>3+5¬</p>
+	<p class='push'>If your computer responded 8 then we are ready to dive in!</p>
+	<p class='push'>Later we will learn how to create and modify programs outside IDLE.</p>
+		
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

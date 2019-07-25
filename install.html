@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Install</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Installing Python</h1>
+		<p>Go to: <a href='https://www.python.org/downloads/' target='_blank'>https://www.python.org/downloads/</a>, and click on 'Download Python 3.7.3' for your platform.<img src='Assets/img-download.png' style='float:right; margin-right:2em'></p>
+		<ul>
+			<li>Find the downloaded program (typically in your 'Downloads' folder): python-3.7.3-macos10.9.pkg, and double click it</li>
+			<li>Select ‘Add Python 3.7 to PATH, and click ‘Install Now’</li>
+			<li>Select the default option at all prompts (‘Continue’ ,‘Agree’ and your password when needed)</li>
+		</ul>
+
+	<h2>Windows</h2>
+		<ul>
+			<li>Click Start, type 'idle' in the search window, then select IDLE Python</li>
+			<li><span class='home'> Explore</span>: <a href='https://docs.python.org/3/using/windows.html' target='_blank'>Windows Info</a></li>
+		</ul>
+
+	<h2>Mac</h2>
+		<ul>
+			<li>in Spotlight ( command space) type 'idle'</li>
+			<li><span class='home'> Explore</span>: <a href='https://docs.python.org/3/using/mac.html' target='_blank'>Mac Info</a></li>
+		</ul>
+		<div id='div1' class='code' style='display: none'>
+			Fahrenheit = 78<br/>
+			print( (Fahrenheit - 32) * 5/9)<br/>
+			<br/><strong>better:</strong><br/>
+			print( 'Celsius = ', (Fahrenheit - 32) * 5/9)
+		</div>
+			
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

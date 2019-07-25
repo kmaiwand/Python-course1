@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Functions</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Functions</h1>
+	<p>A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.</p>
+	<p>Functions serve 2 main purposes:</p> 
+	<ul>
+		<li>Create self-contained, reusable modules (Decomposition)</li>
+		<li>Suppress detail (Abstraction)</li>
+	</ul>
+	<p class='push'>Examples for function definition and invocation:</p>
+	<ul>
+	<div class='code'><pre>
+def greet( name):
+	print( "Hello", name)
+	
+greet( 'John')
+	</pre></div>
+		
+	<p class='push' onclick="show_hide('div1')">Average of list elements<img src='Assets/icon_down.png' alt='Down' /></p>
+	<div id='div1' class='code' style='display: none'><pre>
+def avg( lst):
+	sum = 0
+	for el in lst:
+		sum += el
+	return sum/len(lst)
+	
+print( avg( [12, 34, 65]))
+	</pre></div>
+	
+	<p class='push' onclick="show_hide('div2')">Square root of a number<img src='Assets/icon_down.png' alt='Down' /></p>
+	<p><a href='https://en.wikipedia.org/wiki/Methods_of_computing_square_roots'>Babylonian method</a>: root<sub>n+1</sub> = (root<sub>n</sub> + N/root<sub>n</sub>)/2</p>
+	<div id='div2' class='code' style='display: none'><pre>
+def sq_root( N, eps):
+	print( 'Approximate square root of {} within +/- {}'.format( N, eps))
+	root= N/2
+	while abs( root**2 - N) > eps:
+		print( '\tcurrent root', root)
+		root= ( root + N/root)/2
+	return root
+
+print( sq_root( 34.0, 0.001)
+<br/><strong>better:</strong>
+import math
+print( math.sqrt( 34.0))
+	</pre></div>
+
+	<p class='push' onclick="show_hide('div3')">Sort a list using <a href='https://www.youtube.com/watch?v=koMpGeZpu4Q'>Bubble sort</a><img src='Assets/icon_down.png' alt='Down' /></p>
+	<div id='div3' class='code' style='display: none'><pre>
+def bubble_sort( lst):
+	for last in range( len(lst)-1, 0, -1):
+		for i in range( last):
+			if lst[i] > lst[i+1]:
+				lst[i], lst[i+1] = lst[i+1], lst[i]	# swap
+	return lst
+
+print( bubble_sort( [34.0, -56, 0.001]))
+print( 'Better sort:', sorted( [34.0, -56, 0.001]))
+
+	</pre></div>
+
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Resources</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Web Resources</h1>
+	<p>There are lots of resources related to Python available online. The list below is a sampling.</p>
+	<ul>
+		<li><a href='https://www.python.org/about/gettingstarted/'>Python For Beginners</a></li>
+		<li><a href='https://docs.python-guide.org/intro/learning/'>Learning Python</a></li>
+		<li><a href='https://www.learnpython.org'>learnpython.org</a></li>
+		<li><a href='https://www.programiz.com/python-programming'>programiz.com</a></li>
+		<li><a href='https://www.pynative.com'>pynative.com</a></li>
+		<li><a href='hhttps://www.codecademy.com/learn/learn-python-3'>codecademy.com</a></li>
+		<li><a href='https://snipt.net/public/tag/python'>snipt.net</a></li>
+		
+		<p style='margin-left:-1em; margin-top:1.5em';>On YouTube:</p>
+		<li class='ind'><a href='https://www.youtube.com/watch?v=_uQrJ0TkZlc'>Python Tutorial for Beginners</a> (6:14)</li>
+		<li class='ind'><a href='https://www.youtube.com/watch?v=rfscVS0vtbw'>Full Course for Beginners</a> (4:26)</li>
+		<li class='ind'><a href='https://www.youtube.com/watch?v=yE9v9rt6ziw'>Python - Crash Course</a> (2:25)</li>
+		<li class='ind'><a href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm'>Intro to CS and Programming in Python</a> (MIT lectures)</li>
+	</ul>
+
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>
+

@@ -1,0 +1,16 @@
+Hotels Milano
+	Accademia: V. Certosa 68, 02-39211122	Villa Malpensa: 0331-230-944
+Hotels Rome
+	Condotti, 6794661 V. Mario De Fiori 37
+	Valadier, 3611998, V. Fontanella
+Hotels Trento
+	Accademia: 0461-233600
+	Buonconsiglio: 272-888
+	Grand, Trento: 271000
+Hotels Vancouver
+	Executive Inn: Howe St 604-688-7678, 888-388-3932
+	Best Western: Drake St 669-9888
+	Quality Hotel: Howe St 682-0229
+Hotels Zurich
+	Novotel: +41-1-276-2222
+	WallenBerg: +41-1-262-4300

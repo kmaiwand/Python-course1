@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Variables</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Variables</h1>
+	<p>Let's start by looking at how data is represented. A variable is a named placeholder for a value.</p>
+	<p class='code'>>>>myVar = 7¬</p>
+	<p class='push'>The value assigned to a variable can be accessed and changed.</p>
+	<p class='push'>Rules for variable names:</p>
+	<ul>
+		<li>The name consists of letters, numbers and underscores (no spaces!)</li>
+		<li>Cannot start with a number</li>
+		<li>Cannot be one of the Python reserved words (more about these later)</li>
+		<li>Variable names are case sensitive</li>
+	</ul>
+	<p>Each variable has a type, we will learn about types later.</p>
+	<p class='code'>>>>anotherVar = 12.5¬</p>
+
+	<h1>Input & Output</h1>
+	<p>To interact with Python we use the 'print' and 'input' functions.</p>
+	<p class='push'>var = input( prompt)</p>
+	<p>print()</p>
+	<p class='code'>>>>print( myVar)¬</p>
+	<p class='code'>>>>name = input( 'What is your name? ')¬</p>
+	<p class='code'>>>>print( name)¬</p>
+
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

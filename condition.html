@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Conditions</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Conditions</h1>
+	<p>A condition is an expression that is either true or false.</p>
+	<div class='code'><pre>
+var1 == var2
+num1 > num2
+	</pre></div>
+	<p class='push'>Below are usage examples for conditional statements:</p>
+	<p class='push'>1. Perform an action only if a condition is true.</p>
+	<div class='code'><pre>
+if condition:
+	print( 'True')
+	</pre></div>
+	<p class='push'>2. Based on a condition perform one action or another.</p>
+	<div class='code'><pre>
+num = int( input( 'Enter a number: '))
+if( num % 2 == 0):
+	print('Even')
+else:
+	print('Odd')
+	if num % 3 != 0:
+		print( 'And not divisible by 3')
+	</pre></div>
+	<p class='push'>Note:</p>
+	<ul>
+		<li>Either branch can have multiple statements.</li>
+		<li>The actions in either branch have to be indented! Indentation is Python's way of grouping actions. Statements at the same level of indentation belong together.</li>
+	</ul>
+	<p class='push'><span class='home'>Explore</span>: Conditional Statements on <a href='https://www.learnpython.org/en/Conditions' target='_blank'>LearnPython</a>.</p>
+
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>

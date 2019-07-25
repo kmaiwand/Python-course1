@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Intro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+<h1>Introduction to Programming</h1>
+	<h2>Why program?</h2>
+		<a href='https://www.youtube.com/watch?v=3tWMQ3ZMjbg' class='link' target='_blank'>What is Programming (3:30)</a>
+		<a href='http://wiki.c2.com/?PurposeOfProgramming' class='link' target='_blank'>Purpose Of Programming</a>
+	<h2>Why Python?</h2>
+		<a href='https://www.zdnet.com/article/programming-language-of-the-year-python-is-standout-in-latest-rankings/' class='link' target='_blank'>Language of the year</a>
+		<a href='https://www.kdnuggets.com/2017/07/6-reasons-python-suddenly-super-popular.html' class='link' target='_blank'>Super popular</a>
+
+<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+</footer>
+</body>
+</html>

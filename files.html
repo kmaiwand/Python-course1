@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+	<title>Files</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Assets/favicon.ico" rel="icon" />
+	<link href="Assets/slides.css" rel="stylesheet" />
+	<script>
+		function move(e){
+			if( e.keyCode == 37) prev( file_name());
+			if( e.keyCode == 39) next( file_name());
+		};
+		document.onkeydown = move;
+	</script>
+	<script src="Assets/slides.js"></script>
+</head><body>
+	<h1>Working with Files</h1>
+	<p>Reading and writing files:</p>
+	<div class='code'>
+		with open( 'input.txt', 'r') as inFile:<br/>
+			<span class='ind'>data = inFile.read()</span><br/><br/>
+		with open( 'table.html', 'w') as outFile:<br/>
+			<span class='ind'>outFile.write( content)</span><br/>
+	</div>
+
+<p class='push'>There are four different methods (modes) for opening a file:</p>
+<ul>
+	<li>"r" - Read - Default value. Opens a file for reading, error if the file does not exist</li>
+	<li>"a" - Append - Opens a file for appending, creates the file if it does not exist</li>
+	<li>"w" - Write - Opens a file for writing, creates the file if it does not exist</li>
+	<li>"x" - Create - Creates the specified file, returns an error if the file exists</li>
+</ul>
+	<h2>File Exercises</h2>
+	<p>Examples below illustrate batch manipulation of files, a common task in System Administration.</p>
+	
+	<p>Rename all files in a directory <img src='Assets/icon_down.png' alt='Down' onclick="show_hide('div1')"/></p>
+	<p>Create a test folder with some random files to test the script.</p>
+	<div id='div1' class='code' style='display: none'><pre>
+import os
+def rename( dir, name, ext):
+	""" Rename each file in 'dir' to 'name' with a sequential number and '.ext' """
+	if not name:    # if no name given use directory's name
+		name = os.path.split( dir)[1]
+	print( "\n" + dir)
+	for nr, old in enumerate( os.listdir( dir)):
+		new = '{}-{:0>2d}.{}'.format( name, nr, ext)
+		os.rename( os.path.join( dir, old), os.path.join( dir, new))
+		print( "{:<20} -> {}".format( old, new))
+rename( 'Test', 'file', 'txt')
+	</pre></div><br/>
+
+	<p>Search for a pattern in a directory<img src='Assets/icon_down.png' alt='Down' onclick="show_hide('div2')"/></p>
+	<p>Create a test folder with some text files to test the script.</p>
+	<div id='div2' class='code' style='display: none'><pre>
+import os
+def search_all( dir, pattern, ext):
+	""" look for pattern in dir in files whose extension is in ext """
+	print( "\nLooking in '{}' for '{}' in files with extension '{}'".format( dir, pattern, ext))
+	for file in os.listdir( dir):
+		path_file = os.path.join( dir, file)
+		if os.path.splitext( file)[1] in ext:
+			for nr, line in enumerate( open( path_file, 'r').readlines()):
+				if line.find( pattern) >= 0:
+					print( "In {} line {}".format( file, nr+1))
+
+search_all( 'Test', 'print', ['.html'])
+	</pre></div>
+
+	<p class='push'><span class='home'>Explore</span>: File Handling on <a href='https://www.pythonforbeginners.com/cheatsheet/python-file-handling' target='_blank'>PythonForBeginners.com</a>.</p>
+	
+	<footer>
+		<a href='#' id='left' title='Left arrow for previous' onclick="prev( file_name())"><img src='Assets/icon_left.png' alt='Previous' /></a>
+		<a href='TOC.py' id='center' title='Table of Contents'><img src='Assets/icon_list.png' alt='Contents' /></a>
+		<a href='#' id='right' title='Right arrow for next' onclick="next( file_name())"><img src='Assets/icon_right.png' alt='Previous' /></a>
+	</footer>
+</body></html>
